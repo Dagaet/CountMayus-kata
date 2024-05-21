@@ -10,4 +10,9 @@ describe("obtainMayusPositionsInString should ", () => {
 
     expect(result).toStrictEqual([])
   })
+  it("register an array with positions when there are mayus", () => {
+    const result = obtainMayusPositionsInString("AnnOnYmO")
+
+    expect(result).toStrictEqual([0, 3, 5, 7])
+  })
 })
