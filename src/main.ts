@@ -1,17 +1,14 @@
 export function obtainMayusPositionsInString(text: string): number[] {
-  const numbers: number[] = []
+  const mayusPositionsInText: number[] = []
 
-  let regex: RegExp = /[A-Z]/g
-  // let output = text.match(regex)
-  // output?.forEach((mayus) => {
-  //   numbers.push(text.indexOf(mayus))
-  // })
+  let mayusRegex: RegExp = /[A-Z]/g
 
   for (let position = 0; position < text.length; position++) {
-    if (regex.test(text[position])) {
-      numbers.push(position)
+    let isMayus = mayusRegex.test(text[position])
+    if (isMayus) {
+      mayusPositionsInText.push(position)
     }
   }
 
-  return numbers
+  return mayusPositionsInText
 }
