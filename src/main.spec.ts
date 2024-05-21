@@ -1,10 +1,13 @@
 import { describe, it, expect } from "vitest"
-import { myFunction } from "./main.js"
+import { obtainMayusPositionsInString } from "./main.js"
 
-describe("Default test", () => {
-  it("should work", () => {
-    const result = myFunction()
+// Should return empty array when there are no mayus
+// Should return an array with positions when there are mayus
 
-    expect(result).toBe(true)
+describe("obtainMayusPositionsInString should ", () => {
+  it("not register any position when there are no mayus", () => {
+    const result = obtainMayusPositionsInString("")
+
+    expect(result).toStrictEqual([])
   })
 })

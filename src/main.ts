@@ -1,3 +1,3 @@
-export function myFunction() {
-  return true
+export function obtainMayusPositionsInString(text: string): string[] {
+  return []
 }
